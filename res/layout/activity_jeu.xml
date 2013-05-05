@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:background="#ffffff" xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <TextView
+        android:id="@+id/commandes"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="25dp"
+        android:fontFamily="Helvetica"
+        android:gravity="center_horizontal"
+        android:text="@string/bataille"
+        android:textColor="#000000"
+        android:textSize="11pt"
+        tools:context=".BatailleNavale" />
+
+    <!-- Grille ordinateur -->
+    <RelativeLayout
+        android:id="@+id/relative_ordi"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignTop="@+id/relative_joueur" >
+
+        <GridView
+            android:id="@+id/grid_ordi"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:numColumns="11" >
+        </GridView>
+    </RelativeLayout>
+
+    <!-- Grille joueur -->
+    <RelativeLayout
+        android:id="@+id/relative_joueur"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true" >
+
+        <GridView
+            android:id="@+id/grid_joueur"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:numColumns="11" >
+        </GridView>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/text_ordi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/relative_ordi"
+        android:layout_alignParentLeft="true"
+        android:layout_alignRight="@+id/relative_ordi"
+        android:gravity="center_horizontal"
+        android:layout_marginBottom="10dp"
+        android:text="@string/ordinateur"
+        android:textColor="#000000" />
+
+    <TextView
+        android:id="@+id/text_joueur"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/relative_joueur"
+        android:layout_alignLeft="@+id/relative_joueur"
+        android:layout_alignParentRight="true"
+        android:gravity="center_horizontal"
+        android:layout_marginBottom="10dp"
+        android:text="@string/joueur"
+        android:textColor="#000000" />
+    
+</RelativeLayout>
